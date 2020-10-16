@@ -1,0 +1,893 @@
+{
+  "intents": [
+    {
+      "intent": "ENQUIRY",
+      "examples": [
+        {
+          "text": "ANY OFFERS AVAILABLE TODAY"
+        },
+        {
+          "text": "ANY OFFERS FOR COUPLES?"
+        },
+        {
+          "text": "CAN YOU PROVIDE MENU CARD"
+        },
+        {
+          "text": "chicken 66"
+        },
+        {
+          "text": "GOOD AFTERNOON"
+        },
+        {
+          "text": "GOOD MORNING"
+        },
+        {
+          "text": "HELLO"
+        },
+        {
+          "text": "HI"
+        },
+        {
+          "text": "WHAT ARE THE SPECIAL ITHEMS IN MENU"
+        },
+        {
+          "text": "WHAT IS THE TODAY SPECIAL"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "all the best"
+        },
+        {
+          "text": "best of luck"
+        },
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "how wre you"
+        },
+        {
+          "text": "menu please"
+        }
+      ],
+      "description": "wishes from the user"
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "can you please take the order"
+        },
+        {
+          "text": "i want to place an order"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "email",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ENQUIRY",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "DEALS",
+          "synonyms": [
+            "DISCOUNTS "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "MAY I HELP YOU",
+          "synonyms": [
+            "YES"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "MENU PLEASE",
+          "synonyms": [
+            "MENU"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "OFFER",
+          "synonyms": [
+            "RECOMENDED"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "SPECIAL ITEMS",
+          "synonyms": [
+            "SPECIALS "
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greeting",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "gf"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "ga",
+            "GM",
+            "good morning"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "HELLO",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "HI",
+          "synonyms": [
+            "HI"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "how are you",
+          "synonyms": [
+            "hru"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "items",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "appolo fish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken 66",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken manchuria",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ulavacharu biryani",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy, purchase "
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "CARD",
+          "synonyms": [
+            "CVV NUMBER"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "CASH ON DELEIVERY"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "CREDIT CARD",
+          "synonyms": [
+            "CC"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "DEBIT CARD",
+          "synonyms": [
+            "DC"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Special",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "appolo fish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken 66",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken manchuria",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ulavacaharu biryani",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hi"
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1602147138616",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_6_1602147138616",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602147198806",
+      "previous_sibling": "node_5_1602147755502"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1602147200004",
+      "context": {
+        "items": "@items"
+      },
+      "conditions": "@items",
+      "event_name": "input",
+      "dialog_node": "handler_1_1602147200015"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "CAN YOU PROVIDE MY ITEMS "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1602147200004",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1602147200015",
+      "previous_sibling": "handler_1_1602147200015"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1602147520350",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_4_1602147520352"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "WE ACCEPT COD,CARD.DEBIT CARD,CREDIT CARD"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1602147520350",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1602147520352",
+      "previous_sibling": "handler_4_1602147520352"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1602147486177",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_7_1602147486179"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "HOW MANY DO YOU WANT"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1602147486177",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1602147486180",
+      "previous_sibling": "handler_7_1602147486179"
+    },
+    {
+      "type": "standard",
+      "title": "ENQUIRY ",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#ENQUIRY || @ENQUIRY",
+      "dialog_node": "node_1_1602068514915",
+      "previous_sibling": "node_8_1602067696973"
+    },
+    {
+      "type": "standard",
+      "title": "special",
+      "parent": "node_1_1602068514915",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@Special",
+      "dialog_node": "node_5_1602146107872"
+    },
+    {
+      "type": "standard",
+      "title": "DELETING CONTEXT",
+      "output": {
+        "deleted": "<?context.remove('items')?><?context.remove('number')?><?context.remove('payment')?> <?context.remove('email')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1602147138616",
+      "conditions": "true",
+      "dialog_node": "node_5_1602147755502"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "THANK YOU, YOUR ORDER OF $NUMBER OF $ITEMS IS PLACED. PLEASE PAY U R USING $PAYMENT. YOUR RECEIPT IS SENT TO $EMAIL. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#order && @order",
+      "dialog_node": "node_6_1602147138616",
+      "previous_sibling": "node_1_1602068514915"
+    },
+    {
+      "type": "standard",
+      "title": "greetings ",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greeting && @Greeting",
+      "dialog_node": "node_8_1602067696973",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "thank you for providing your mail id. your $email is used for further response  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_9_1602147865108"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:HELLO",
+      "dialog_node": "response_10_1602068003491",
+      "previous_sibling": "response_8_1602067839069"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "get out"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:HELLO",
+      "dialog_node": "response_10_1602068224386",
+      "previous_sibling": "response_4_1602068176334"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " i am good "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:(how are you)",
+      "dialog_node": "response_1_1602068021736",
+      "previous_sibling": "response_10_1602068003491"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "menu ",
+            "source": "https://i.postimg.cc/d3SV7wb0/restaurant-menu-card-500x500.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1602068514915",
+      "conditions": "@ENQUIRY:(MENU PLEASE)",
+      "dialog_node": "response_3_1602145032961",
+      "previous_sibling": "node_5_1602146107872"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "get lost "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:(good morning)",
+      "dialog_node": "response_4_1602068176334",
+      "previous_sibling": "response_7_1602068097554"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "today special items ",
+            "options": [
+              {
+                "label": "chicken 66",
+                "value": {
+                  "input": {
+                    "text": "chicken 66"
+                  }
+                }
+              },
+              {
+                "label": "chicken manchuria",
+                "value": {
+                  "input": {
+                    "text": "chicken manchuria"
+                  }
+                }
+              },
+              {
+                "label": "ulavacharu biryani",
+                "value": {
+                  "input": {
+                    "text": "ulavacharu biryani"
+                  }
+                }
+              },
+              {
+                "label": "appollo fish",
+                "value": {
+                  "input": {
+                    "text": "appolo fish "
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1602068514915",
+      "conditions": "@ENQUIRY:(SPECIAL ITEMS)",
+      "dialog_node": "response_4_1602145720469",
+      "previous_sibling": "response_8_1602145668422"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "it's cost 400"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602146107872",
+      "conditions": "@Special:(chicken 66)",
+      "dialog_node": "response_4_1602146269501",
+      "previous_sibling": "response_7_1602146197946"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:(how are you)",
+      "dialog_node": "response_7_1602068097554",
+      "previous_sibling": "response_8_1602068076606"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "it's cost 500"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602146107872",
+      "conditions": "@Special:(chicken manchuria)",
+      "dialog_node": "response_7_1602146197946"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "it's cost 800"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602146107872",
+      "conditions": "@Special:(appolo fish)",
+      "dialog_node": "response_7_1602146305007",
+      "previous_sibling": "response_8_1602146286724"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "greetings "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:(good afternoon)",
+      "dialog_node": "response_8_1602067839069"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1602067696973",
+      "conditions": "@Greeting:HI",
+      "dialog_node": "response_8_1602068076606",
+      "previous_sibling": "response_1_1602068021736"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "we are having 20% on vegeterian "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "we are having 30% on non vegeterian "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "we are having 40% on non vegeterian "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1602068514915",
+      "conditions": "@ENQUIRY:OFFER",
+      "dialog_node": "response_8_1602145668422",
+      "previous_sibling": "response_3_1602145032961"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "it's cost 300"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1602146107872",
+      "conditions": "@Special:(ulavacaharu biryani)",
+      "dialog_node": "response_8_1602146286724",
+      "previous_sibling": "response_4_1602146269501"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1602147138616",
+      "variable": "$items",
+      "dialog_node": "slot_3_1602147200004",
+      "previous_sibling": "handler_1_1602147198806"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1602147138616",
+      "variable": "$payment",
+      "dialog_node": "slot_6_1602147520350",
+      "previous_sibling": "slot_8_1602147486177"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1602147138616",
+      "variable": "$number",
+      "dialog_node": "slot_8_1602147486177",
+      "previous_sibling": "slot_3_1602147200004"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. i am mounika how can i help you? i am here to help you to find your delicious dishes "
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
